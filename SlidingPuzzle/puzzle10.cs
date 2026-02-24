@@ -11,18 +11,18 @@ class Rect : Shape
     // 규칙 #2. 추상 클래스에서 상속 받는 경우
     //          반드시 추상 메소드 구현해야 합니다. 
     //          만들지 않으면 에러!
-    public override void Draw() { } // 안에 코드 없이 중괄호만 있어도 구현이 된거임 
+    public override void Draw() { }
 }
 
 class Program
 {
     public static void Main()
     {
-        // 규칙 #3. 추상 클래스는 객체 생성이 안됨!!!!!
+        // 규칙 #3. 추상 클래스는 객체 생성 안됩니다.
         // => 메소드 구현이 없으므로
         Shape s = new Shape(); // error. 컴파일 에러
 
-        // 규칙 #4. 추상 클래스라도 참조 변수로만 사용 가능!!! -> 다형성용 
+        // 규칙 #4. 추상 클래스라도 참조 타입으로는 사용가능
         Shape s2 = new Rect(); // ok
 
     }

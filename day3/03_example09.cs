@@ -1,25 +1,35 @@
 ﻿using static System.Console;
 
-// 핵심 #9. abstract
+// 핵심 #9. abstract method
 
-class Shape
+
+// Shape는 추상화된 코드, 실제로 객체로 사용할 건 아님. 참조변수로만 쓸거임
+
+// virtual 메소드: 기반 클래스는 기본 구현을 제공 -> 자식 클래스가 기본 구현을 사용하거나 재정의 가능
+// abstract 메소드: 기반 클래스가 구현 없이, 자식에게 구현을 강제함 -> 파생 클래스가 반드시 구현해야함
+//      이름을 약속해놔야 shape 참조 변수로 Draw 메소드를 부를 수 있기 때문!!
+
+
+// 구현 담당
+// 가상 메소드는 부모 담당 / 추상 메소드는 자식 담당
+// 재정의를 "옵션"으로 하려면 virtual로 하고, 재정의를 필수로 할거면 abstract 
+
+// 만약 abstract method가 한개라도 있다면, 클래스도 abstract method가 됨!!!
+// "추상화된 개념이 존재하면 넌 추상화된 객체야"
+//      클래스에 abstract 존재 -> 내부에 추상 메소드가 있다는 의미 
+abstract class Shape
 {
     private int color = 0;
+    public void SetColor(int c) { color = c; }                  // 기본 메소드도 있어도 됨 (interface는 추상 메소드만 있어야함)
 
-    public void SetColor(int c) { color = c; }
+    // Shape은 추상화된 개념 -> 실체가 없어서 Draw 못함 ㅋㅋ
+    //public virtual void Draw() { WriteLine("Draw Shape"); }   // virtual method
+    public abstract void Draw();                                // abstract method
 
-
-
-
-    public virtual void Draw() { WriteLine("Draw Shape"); }
-
-    public virtual Shape Clone()
-    {
-        Shape s = new Shape();
-        s.color = color;
-        return s;
-    }
-    public virtual int GetArea() { return 0; }
+    // clone도 실체가 없어서 Draw 못함 ㅋㅋ 
+    public abstract Shape Clone();  
+    
+    public virtual int GetArea() { return -1; }
 }
 
 
