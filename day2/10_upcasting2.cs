@@ -20,15 +20,20 @@ class Program
 {
     //public static void NewYear(Dog d) => ++d.Age   // Dog만 전달 가능
 
-    public static void NewYear(Animal animal)   // Animal / Dog / Cat 모두 전달 가능
+    public static void NewYear(Animal animal)   // Animal / Dog / Cat 객체를 자동 upcasting으로 전달 가능
     {
         ++animal.Age;
 
         // 자식 멤버에 접근하려면
+        //      is로 타입 확인
         if(animal is Dog)
         {
             Dog dog =(Dog)animal;
             dog.Color = 10;
+        }
+        if(animal is Cat cat) // downcasting까지
+        {
+            cat.Speed = 10;
         }
     }
 

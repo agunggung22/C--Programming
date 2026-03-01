@@ -42,12 +42,11 @@ class Program
         double d1=new double();
         Rect r1 = new Rect();
 
+
         // 하지만, 기본 타입들은 변수 생성시에 new를 생략할 수 있도록 편의를 제공하는 것! (C/C++과의 통일성을 위해)
-        // 기본형은 new로 선언을 해도 heap이 아닌 stack에 선언됨!!
+        //      "primitive type에게 제공되는 단축표기법"
+        // 기본형은 new로 선언을 해도 stack에 value가 저장됨  (heap 사용 안함)
         int n2 = 0;
         double d2 = 3.4;
-        // 선언 타입은 당연히 new로 객체를 생성해야함
-
-
     }
 }

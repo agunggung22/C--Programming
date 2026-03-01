@@ -1,12 +1,19 @@
-﻿class Person
+﻿
+// 핵심. property 초기화
+class Person
 {
     private int age;
+    private string name;
 
-    // C# 에서는 expression bodied 를 많이 사용
     public int Age
     {
         get => age;
-        set => age = value;  // if 등을 사용하려면 {} 로 구현
+        set => age = value; 
+    }
+    public string Name
+    {
+        get => name;
+        set => name = value;
     }
 
 }
@@ -14,14 +21,18 @@ class Program
 {
     public static void Main()
     {
-        // 인자가 한개인 생성자에 인자 10을 전달
-        // 하지만, 인자가 한개인 생성자가 존재하지 않으면 error
-        Person p = new Person(10);
-
-        // property는 생성 시에 초기화도 가능
-        //      {} 중괄호 내부에 property 
+        // 객체 생성 시에 프로퍼티 초기화도 가능
+        //      {} 중괄호로 초기화
+        //      중괄호 안에 "property 이름 = value"
+        //      내부적으로 .set 호출
         Person p1 =new Person { Age = 10 };
         Person p2 = new Person { Age = 10, Name="AAA" };
+
+        // 객체가 함수처럼 생성되었다? => property 초기화 문법 
+        Person person1 = new Person { 
+            Age = 1, 
+            Name = "hyewon" 
+        };
 
     }
 }

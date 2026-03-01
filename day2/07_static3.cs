@@ -33,15 +33,20 @@ class Date
     }
 
     // 3. 생성자로 필드 초기화
+    // 3-1. 필드 직접 접근
     public Date(int year, int month, int day) 
         =>(this.year, this.month, this.day) =(year, month,day);
+
+    // 3-2. 프로퍼티 접근
+    public Date(int year, int month, int day) => (Year,Month,Day)=(year,month,day);
 }
 
 class Program
 {
     public static void Main()
     {
-        Date d1=new Date(2025,2,23);
+        // 생성자를 만들어서 필드초기화 혹은 프로퍼티 초기화 문법 
+        Date d1=new Date(2025,2,23); // == new Date{Day = 23, Month = 2, Year = 2025};
         Console.WriteLine(d1);
     }
 }
