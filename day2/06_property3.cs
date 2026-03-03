@@ -1,5 +1,5 @@
 
-// 핵심. property
+// 핵심. property는 get/set 중에 하나만 만들어도 됨
 
 class Person1
 {
@@ -8,6 +8,7 @@ class Person1
     // get/set 중 한개만 만들어도 됨
     public int Age
     {
+        // get은 사용 못함
         set
         {
             if (value > 0)
@@ -26,6 +27,6 @@ class Program
         Person1 person1 = new Person1();
 
         person1.Age = 10;       // set 
-        int n = person1.Age;    // get  -> 없으므로 error
+        //int n = person1.Age;    // get  -> 없으므로 error
     }
 }

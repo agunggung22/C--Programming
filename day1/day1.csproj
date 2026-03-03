@@ -37,10 +37,6 @@
     <Compile Remove="07_method_property3.cs" />
     <Compile Remove="08_oop0.cs" />
     <Compile Remove="08_oop1.cs" />
-    <Compile Remove="08_oop2.cs" />
-    <Compile Remove="08_oop3.cs" />
-    <Compile Remove="hello.cs" />
-    <Compile Remove="Program.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -71,8 +67,10 @@
     <None Include="07_method_property3.cs" />
     <None Include="08_oop0.cs" />
     <None Include="08_oop1.cs" />
-    <None Include="08_oop2.cs" />
-    <None Include="08_oop3.cs" />
+    <None Include="hello.cs" />
+    <None Include="Program.cs" />
+    <None Include="hello.cs" />
+    <None Include="Program.cs" />
   </ItemGroup>
 
 </Project>

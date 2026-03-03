@@ -8,12 +8,13 @@ class Person1
     public int age;
 }
 
-// 2. age의 접근제어자는 private && setMethod로 접근
+// 2. age의 접근제어자는 private && 외부에서는 getMethod/setMethod 메소드로 접근
 //      안전성 확보 ✔️
 //      가독성 떨어짐 
 class Person2
 {
     private int age;
+
     public int GetAge() => age;
     public void SetAge(int value)
     {
@@ -24,7 +25,6 @@ class Person2
 
 // 3. 안전성도 높고, 가독성도 좋게 할 수 없을까?
 //      property!!!
-
 class Program
 {
     public static void Main()

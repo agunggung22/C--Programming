@@ -4,3 +4,7 @@ using static System.Console;
 
 int cnt = 0;
 
+while (cnt < 10)
+{
+    WriteLine("hello")
+}

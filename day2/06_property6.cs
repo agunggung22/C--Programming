@@ -1,6 +1,9 @@
-﻿class Person
+﻿
+// 핵심. property 만드는 문법 정리
+
+class Person
 {
-    // 1. 필드를 만들기
+    // 1. 직접 필드를 만들기
     private int age;
 
     // 2. age에 대한 property 작성
@@ -11,7 +14,15 @@
         set => age = value;
     }
 
-    // 위와 같이 property의 기본형(추가적인 로직이 없음)은 아래처럼 한 줄로 표현 가능
+    // 3. 프로퍼티를 필트처럼 사용
+    //      실무에서는 내부에서도 프로퍼티 사용 권장!!!!
+    //      get 로직 추가시를 대비해서 
+    public bool isOld()
+    {
+        return Age > 80;
+    }
+    //-----------------------------------------------------------------
+    // 위와 같이 property에 추가 로직 없이, 단순히 private field를 읽고 쓰기만 한다면 아래처럼 편리하게 선언
     //      1. 필드도 자동으로 생성됨(int age 불필요)
     //      2. Age Property의 set/get 기능 자동 추가 
     public int Age { get; set; } = 0;

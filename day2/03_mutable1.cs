@@ -1,30 +1,24 @@
 ﻿// mutable.cs
 
-// 핵심. 애초에 문자열 표기 ""를, 그 자체로 컴파일러가 내장 타입인 string으로 인식함!!!!!
+// 핵심. string은 immutable하다
 
 // mutable   : 객체의 상태를 변경할수 있는것
-// immutable : 객체의 상태를 변경할수 없는것 / 상수형 
+// immutable : 객체의 상태를 변경할수 없는것 / 초기화한 이후에 메모리 수정 불가
 
-// #1. int 타입의 객체는 mutable 합니다.
+// #1. int 타입 변수는 mutable 합니다.
 int n = 10;
-n = 20;    // ok
+n = 20;    // 변경 ok
 
+// #2. string은 immutable
+//      "" 자체도 string literal 객체이기 때문에, string literal은 수정 불가능
 
-// #2. string이 immutable한 객체이기 때문에 문자열 리터럴은 수정이 불가능
-//      string이 immutable한 이유는, 설계를 그렇게 한거임 
-//          내부 변경 메서드도 없고, 상태 변경시에는 새 객체를 반환함 
+// 어디 메모리에 저장?
 // C / C++ : 문자열 리터럴이 정적 영역
-// C#/Java : 문자열 리터럴이 힙(Intern Pool)에 저장됨
-     
+// C#/Java : 문자열 리터럴이 힙(힙 내부의 Intern Pool)에 저장됨
+//      string intern pool: 문자열 리터럴을 저장/공유하기 위한 힙 공간
+//      동일한 문자열을 하나만 만들어서 공유하는 영역
+string s1 = "abcd";  
 
-// 헷갈리는 string 생성
-// string만, 컴파일러가 new 없이 문자열 리털럴로 초기화/대입 할 수 있도록 한것
-string s1 = "abcd";  // new string("abcd") <- "abcd"는 String 객체이므로 수정 불가
-
-char c = s1[0]; // ok
-s1[0] = 'x';    // error
-
-string s2 = s1.ToUpper();
 
 
 

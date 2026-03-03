@@ -39,14 +39,15 @@ class Program
         int n = 10;
         n = 20;
 
-        // 객체 object : 상태를 가지고 행동을 할 수 있는 하나의 사물채
-
+        // 객체(object): 상태를 가지고 행동을 할 수 있는 하나의 사물채
         Rect rc1 = new Rect(1, 1, 10, 10);
 
-        // 물론, 변수는 객체라 할 수 있습니다. (변수 < 객체)
+        // 물론, 변수는 객체라 할 수 있습니다. (변수 << 객체)
         
         // 관례적 차이
-        // 변수는 언어 자체가 제공하는 타입들
-        // 객체는 사용자가 직접 선언한 타입들
+        // 변수는 언어 자체가 제공하는 타입들 (primitive type)
+        // 객체는 사용자가 직접 선언한 타입들 (user define type, reference type)
+        
+        // Window w = new Window()에서 w는 Window 객체
     }
 }

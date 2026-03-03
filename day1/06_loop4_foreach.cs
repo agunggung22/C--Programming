@@ -1,6 +1,13 @@
 // for 복사
 
-// 배열의 길이를 몰라도 되고, 모든 요소에 적용
+// for: 개수가 정확한 경우
+for(int i=0; i < 10; i++) { }
+
+// foreach: iterable 객체를 순회 
+//      python: for a in x
+//      c#: foreach(var a in x)
+//      c++: for(auto a : x)
+//      java: for(int a: x)
 foreach(var e in x) // var을 쓰면, x의 타입이 달라져도 괜찮음
 {
     WriteLine($"{e}");

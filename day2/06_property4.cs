@@ -1,12 +1,21 @@
-﻿class Person
+﻿
+// 핵심. expression bodied로 구현
+
+class Person
 {
     private int age;
-
-    // C# 에서는 expression bodied 를 많이 사용
+    
     public int Age
     {
         get => age;
-        set => age = value;  // if 등을 사용하려면 {} 로 구현
+        set => age = value;
+    }
+    // C# 에서는 expression bodied 를 매우 많이 사용
+    //      한줄이 아니라, if 등을 사용하려면 {} 로 구현
+
+    public int Age
+    {
+        
     }
 }
 class Program
@@ -15,8 +24,8 @@ class Program
     {
         Person p = new Person();
 
-        p.Age = 10;
-        int n = p.Age; r
+        p.Age = 10;     // 쓰기(set)
+        int n = p.Age;  // 읽기(get)
 
     }
 }
