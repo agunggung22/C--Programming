@@ -22,6 +22,7 @@ class Program
         s[0] = 10;
 
         // C++, C#, Java: 배열도 있고 List도 존재
+        //      C++의 List는 vector
         // python : List만 존재
     }
 }

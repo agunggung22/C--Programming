@@ -14,6 +14,7 @@ class Shape
 
 class Rect : Shape
 {
+    // 자식 클래스에서 부모의 메소드를 override
     public override void Draw() { WriteLine("Draw Rect"); }
 }
 
@@ -42,8 +43,9 @@ class Program
             }
             else if (cmd == 9)
             {
-                // 이제 부모 참조변수로 draw()를 호출해도 오류가 안남
-                // 하지만, static binding이므로 부모의 Draw가 호출됨 
+                // 이제 동적 바인딩
+                // e가 참조하는 객체의 실제 타입에 따라 호출하는 메소드가 달라짐
+                // 이것이 다형성 지원
                 foreach (var e in s)
                 {
                     e.Draw();

@@ -1,10 +1,11 @@
 ﻿using static System.Console;
 
-핵심: virtual vs non-virtual
+// 핵심: virtual vs non-virtual
+// 파생 클래스에서 재정의할 메소드면 virtual, 아니면 non-virtual
 
 // non-virtual 메소드도 자식클래스에서 new로 오버라이드가 가능하잖아요, 그럼 new로 재정의하는 문법은 보통 언제 쓰는건가요??
 // new는 문법적으로만 제공될 뿐 실제로 객체지향에서 자주 샤용되는 문법은 아님
-// 코드리뷰시에: "new가 왜 필요함?? 하는정도 수준"
+// 코드리뷰시에: "new가 왜 필요함?? 하는정도"
 class Shape
 {
     private int color = 0;

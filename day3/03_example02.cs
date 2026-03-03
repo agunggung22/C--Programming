@@ -38,10 +38,9 @@ class Program
             else if (cmd == 9)
             {
                 // 아래 코드는 왜 오류일까?
-                // static binding이므로
-                // 참조 타입인 shape이 파생클래스가 추가한 draw를 호출할 수 없음
-                foreach (var e in s)
-                    e.Draw();
+                // 자식 생클래스가 추가한 draw를 호출할 수 없음
+                foreach (var e in s) // e는 shape 클래스
+                    e.Draw();        // draw 메소드는 자식의 고유 메소드
             }
 
             

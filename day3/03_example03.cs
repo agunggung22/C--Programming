@@ -57,15 +57,14 @@ class Program
             {
 
                 foreach (var e in s)
-                    if (e is Rect)
+                    if (e is Rect rect) // Shape을 Rect로 다운캐스팅
                     {
-                        Rect r = (Rect)e; // Shape을 Rect로 캐스팅
+                        rect.Draw(); 
                     }
-                    else if (e is Circle)
+                    else if (e is Circle circle)
                     {
-                        Circle r = (Circle)e;
+                        circle.Draw();
                     }
-                    r.Draw();
             }
 
 
