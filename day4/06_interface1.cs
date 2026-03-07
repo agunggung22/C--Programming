@@ -11,13 +11,13 @@ class DigitalCamera
     public void Take() { WriteLine("take Digital picture"); }
 }
 
-// 새로운 DigitaCamera 때문에 기존의 Person 클래스도 변경해야됨 [OCP 위반]
-// OCP를 위반하는 디자인패턴
+// -> 새로운 DigitaCamera 때문에 기존의 Person 클래스도 변경해야됨 [OCP 위반]
+//		OCP를 위반하는 디자인패턴
 class Person
 {
 	public void useCamera(Camera c) { c.Take(); }
 
-	// digital camera를 다루는 메소드 오버로딩
+	// digital camera를 다루는 메소드 오버로딩 추가
 	public void useCamera(DigitalCamera dc) { dc.Take(); }
 }
 

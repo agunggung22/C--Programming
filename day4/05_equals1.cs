@@ -20,7 +20,7 @@ class Object
 {
 	public virtual bool Equals(Object obj)
 	{	
-		// Object 를 만들때는 Point 클래스 를 알수 없습니다.
+		// Object 를 만들 때는 Point 클래스를 알수 없습니다.
 		// => 그래서 여기서 동일 상태 를 조사하는 코드는 만들수 없습니다.
 		// => 그래서 기본 구현은 "동일 객체" 조사
 		// => "동일 상태 조사"가 필요하면 파생 클래스(Point) 설계자가
@@ -31,7 +31,7 @@ class Object
 		// return obj == this(자기자신)
 	}
 }
-*/
+
 
 class Point
 {

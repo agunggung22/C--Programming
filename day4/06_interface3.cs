@@ -1,5 +1,6 @@
 using static System.Console;
 
+// 비교 연산자 >,<,==
 class Camera
 {
     public void Take() { WriteLine("take picture");  }

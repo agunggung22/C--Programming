@@ -1,3 +1,4 @@
+using System;
 using static System.Console;
 
 class CPoint
@@ -11,18 +12,14 @@ struct SPoint
     public int Y { get; set; }
 }
 
-
-
 class Program
 {
-    // 참조(reference) 타입은 ref를 사용하지 않아도 참조로 받음
     public static void F1(CPoint pt)
     {
-        pt.X = 10;  // main의 cp가 가리키는 객체 변경
+        pt.X = 10;
         pt.Y = 20;
     }
-
-    // 구조체는 값(value) 타입 
+    // SPoint 는 value 타입이므로 아래 코드는 복사본 생성
     public static void F2(SPoint pt)
     {
         pt.X = 10;
@@ -33,11 +30,9 @@ class Program
         CPoint cp = new CPoint { X = 0, Y = 0 };
         SPoint sp = new SPoint { X = 0, Y = 0 };
 
-        // 구조체는 값 복사라서 변화 없음
         F2(sp);
         Console.WriteLine("{sp.x}, {sp.y}");
 
-        // 객체는 참조 타입이라서 변함
         F1(cp);
         Console.WriteLine("{cp.x}, {cp.y}");
     }

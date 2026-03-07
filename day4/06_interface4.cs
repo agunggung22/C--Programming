@@ -46,7 +46,7 @@ class Program
         int ret = d1.CompareTo(d2);
 
         // CompareTo 이름이 있어도
-        // IComparable 상속을 표기하지 않으면
+        // IComparable 상속을 표기하지 않으면 (다형성)매개변수로 사용 불가
         Label2 e1 = new Label2("Good");
         M1(d1);     // ok
         M1(e1);     // error
